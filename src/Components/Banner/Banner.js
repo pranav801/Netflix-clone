@@ -37,7 +37,24 @@ function Banner() {
                 <h1 className='description'>{movie? movie.overview : ''}</h1>
             </div>
             <div className="fade_bottom"></div>
-        </div>
+            <div className='banner-gradient'/>
+            <script>
+                {
+                    window.addEventListener('scroll', function() {
+                        var navbar = document.querySelector('.navbar');
+                        var scrollPosition = window.scrollY;
+                    
+                        if (scrollPosition > 200) { // Adjust the scroll position value as needed
+                        navbar.classList.add('black-bg');
+                        } else {
+                        navbar.classList.remove('black-bg');
+                        }
+                    })
+                    
+                }
+            </script>
+</div>
+        
     )
 }
 
